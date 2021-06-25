@@ -6,6 +6,7 @@ Próximas modificações a serem feitas:
 - Responsividade
 - Tema dark
 - Theme
+- Melhorar a organização da estilização
 
 Próximas features a serem feitas: 
 
