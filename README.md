@@ -11,3 +11,4 @@ Próximas modificações a serem feitas:
 Próximas features a serem feitas: 
 
 - Responder as perguntas
+- Como se registrar como Administrador
