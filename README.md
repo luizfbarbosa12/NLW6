@@ -6,7 +6,7 @@ Próximas modificações a serem feitas:
 - Responsividade
 - Tema dark
 - Theme
-- Melhorar a organização da estilização
+- Melhorar a organização da estilização usando styled-components
 
 Próximas features a serem feitas: 
 
