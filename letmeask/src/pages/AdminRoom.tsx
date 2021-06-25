@@ -4,6 +4,8 @@ import { RoomCode } from "../components/RoomCode";
 import "../styles/room.scss";
 import { useHistory, useParams } from "react-router-dom";
 import deleteImg from "../assets/images/delete.svg";
+import checkImg from  "../assets/images/check.svg"
+import answerImg from '../assets/images/answer.svg'
 
 // import { FormEvent, useEffect, useState } from "react";
 // import { useAuth } from "../hooks/useAuth";
@@ -38,6 +40,22 @@ export function AdminRoom() {
 
     history.push("/");
   }
+
+  async function handleAnsweredQuestion(questionId: string) {
+    await database
+        .ref(`rooms/${roomId}/questions/${questionId}`)
+        .update({
+          isAnswered: true
+        });
+  }
+
+  async function handleHighlightedQuestion(questionId: string) {
+    await database
+        .ref(`rooms/${roomId}/questions/${questionId}`)
+        .update({
+          isHighlighted: true
+        });
+  }
   return (
     <div id="page-room">
       <header>
@@ -64,7 +82,24 @@ export function AdminRoom() {
                 key={question.id}
                 content={question.content}
                 author={question.author}
+                isAnswered={question.isAnswered}
+                isHighlighted={question.isHighlighted}
               >
+                {!question.isAnswered && (
+                  <>
+                <button
+                  type="button"
+                onClick={() => handleAnsweredQuestion(question.id)}
+                >
+                  <img src={checkImg} alt="check icon" />
+                </button>
+                <button
+                  type="button" 
+                  onClick={() => handleHighlightedQuestion(question.id)}
+                >
+                  <img src={answerImg} alt="answer icon" />
+                </button> 
+                </>)}
                 <button
                   type="button"
                   onClick={() => handleDeleteQuestion(question.id)}
