@@ -1,9 +1,10 @@
-import { Home } from "./pages/home";
-import { NewRoom } from "./pages/NewRoom";
+
+import { NewRoom } from "./pages/NewRoom/NewRoom";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { AuthContextProvider } from "./contexts/AuthContext";
-import { Room } from "./pages/Room";
-import { AdminRoom } from "./pages/AdminRoom";
+import { Room } from "./pages/Room/Room";
+import { AdminRoom } from "./pages/AdminRoom/AdminRoom";
+import { Home } from "./pages/Home/Home";
 
 function App() {
   return (

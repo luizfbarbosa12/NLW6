@@ -1,13 +1,13 @@
-import logoImg from "../assets/images/logo.svg";
-import { Button } from "../components/Button";
-import { RoomCode } from "../components/RoomCode";
-import "../styles/room.scss";
+import logoImg from "../../assets/images/logo.svg";
+import { Button } from "../../components/Button/Button";
+import { RoomCode } from "../../components/RoomCode/RoomCode";
 import { useParams } from "react-router-dom";
 import { FormEvent, useEffect, useState } from "react";
-import { useAuth } from "../hooks/useAuth";
-import { database } from "../services/firebase";
-import { Question } from "../components/Question";
-import { useRoom } from "../hooks/useRoom";
+import { useAuth } from "../../hooks/useAuth";
+import { database } from "../../services/firebase";
+import { Question } from "../../components/Question/Question";
+import { useRoom } from "../../hooks/useRoom";
+import {RoomPage} from './Room.styled'
 
 type RoomParams = {
   id: string;
@@ -58,7 +58,7 @@ export function Room() {
   }
 
   return (
-    <div id="page-room">
+    <RoomPage id="page-room">
       <header>
         <div className="content">
           <img src={logoImg} alt="letmeask" />
@@ -136,6 +136,6 @@ export function Room() {
           })}
         </div>
       </main>
-    </div>
+    </RoomPage>
   );
 }

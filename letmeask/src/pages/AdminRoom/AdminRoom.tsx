@@ -1,18 +1,14 @@
-import logoImg from "../assets/images/logo.svg";
-import { Button } from "../components/Button";
-import { RoomCode } from "../components/RoomCode";
-import "../styles/room.scss";
+import logoImg from "../../assets/images/logo.svg";
+import { RoomCode } from "../../components/RoomCode/RoomCode";
 import { useHistory, useParams } from "react-router-dom";
-import deleteImg from "../assets/images/delete.svg";
-import checkImg from  "../assets/images/check.svg"
-import answerImg from '../assets/images/answer.svg'
-
-// import { FormEvent, useEffect, useState } from "react";
-// import { useAuth } from "../hooks/useAuth";
-// import { database } from "../services/firebase";
-import { Question } from "../components/Question";
-import { useRoom } from "../hooks/useRoom";
-import { database } from "../services/firebase";
+import deleteImg from "../../assets/images/delete.svg";
+import checkImg from  "../../assets/images/check.svg"
+import answerImg from '../../assets/images/answer.svg'
+import { Question } from "../../components/Question/Question";
+import { useRoom } from "../../hooks/useRoom";
+import { database } from "../../services/firebase";
+import { Button } from "../../components/Button/Button";
+import {PageRoom} from './AdminRoom.styled'
 
 type RoomParams = {
   id: string;
@@ -57,7 +53,7 @@ export function AdminRoom() {
         });
   }
   return (
-    <div id="page-room">
+    <PageRoom id="page-room">
       <header>
         <div className="content">
           <img src={logoImg} alt="letmeask" />
@@ -111,6 +107,6 @@ export function AdminRoom() {
           })}
         </div>
       </main>
-    </div>
+    </PageRoom>
   );
 }

@@ -1,13 +1,14 @@
-import illustration from "../assets/images/illustration.svg";
-import logoImg from "../assets/images/logo.svg";
-import googleIconImg from "../assets/images/google-icon.svg";
-import "../styles/auth.scss";
-import { Button } from "../components/Button";
+import illustration from "../../assets/images/illustration.svg";
+import logoImg from "../../assets/images/logo.svg";
+import googleIconImg from "../../assets/images/google-icon.svg";
 import { useHistory } from "react-router-dom";
-import { useAuth } from "../hooks/useAuth";
+import { useAuth } from "../../hooks/useAuth";
 import { FormEvent } from "react";
 import { useState } from "react";
-import { database } from "../services/firebase";
+import { database } from "../../services/firebase";
+import { Button } from "../../components/Button/Button";
+import { PageAuth } from "./Home.styled";
+
 
 export function Home() {
   const [roomCode, setRoomCode] = useState("");
@@ -39,7 +40,7 @@ export function Home() {
     history.push(`/rooms/${roomCode}`);
   }
   return (
-    <div id="page-auth">
+    <PageAuth id="page-auth">
       <aside>
         <img
           src={illustration}
@@ -67,6 +68,6 @@ export function Home() {
           </form>
         </div>
       </main>
-    </div>
+    </PageAuth>
   );
 }

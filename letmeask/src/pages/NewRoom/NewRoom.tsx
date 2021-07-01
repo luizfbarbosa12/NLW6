@@ -1,12 +1,12 @@
-import illustration from "../assets/images/illustration.svg";
-import logoImg from "../assets/images/logo.svg";
-import "../styles/auth.scss";
-import { Button } from "../components/Button";
+import illustration from "../../assets/images/illustration.svg";
+import logoImg from "../../assets/images/logo.svg";
+import { Button } from "../../components/Button/Button";
 import { Link, useHistory } from "react-router-dom";
 import { FormEvent } from "react";
 import { useState } from "react";
-import { database } from "../services/firebase";
-import { useAuth } from "../hooks/useAuth";
+import { database } from "../../services/firebase";
+import { useAuth } from "../../hooks/useAuth";
+import {MainContent} from './NewRoom.styled'
 
 export function NewRoom() {
   const { user } = useAuth();
@@ -38,7 +38,7 @@ export function NewRoom() {
         <p>Tire as dúvidas da sua audiência em tempo real</p>
       </aside>
       <main>
-        <div className="main-content">
+        <MainContent>
           <img src={logoImg} alt="letmeask" />
 
           <h2>Criar uma nova sala</h2>
@@ -54,7 +54,7 @@ export function NewRoom() {
           <p>
             Quer entrar em uma sala existente? <Link to="/">Clique aqui</Link>
           </p>
-        </div>
+        </MainContent>
       </main>
     </div>
   );
