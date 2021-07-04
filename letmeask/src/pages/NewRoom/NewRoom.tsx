@@ -7,6 +7,7 @@ import { useState } from "react";
 import { database } from "../../services/firebase";
 import { useAuth } from "../../hooks/useAuth";
 import {MainContent} from './NewRoom.styled'
+import { PageAuth } from "../Home/Home.styled";
 
 export function NewRoom() {
   const { user } = useAuth();
@@ -28,7 +29,7 @@ export function NewRoom() {
   }
 
   return (
-    <div id="page-auth">
+    <PageAuth id="page-auth">
       <aside>
         <img
           src={illustration}
@@ -56,6 +57,6 @@ export function NewRoom() {
           </p>
         </MainContent>
       </main>
-    </div>
+    </PageAuth>
   );
 }

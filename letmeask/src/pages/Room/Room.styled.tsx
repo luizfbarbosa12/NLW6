@@ -1,54 +1,58 @@
 import styled from "styled-components";
+import { theme } from "../../styles/Theme/theme";
 
 export const RoomPage = styled.div`
+background-color: ${theme.darkBackground};
+
   header {
-    padding: 24px;
-    border-bottom: 1px solid #e2e2e2;
+    padding: 2.4rem;
+    border-bottom: .1rem solid #e2e2e2;
 
     .content {
-      max-width: 1120px;
+      max-width: 112rem;
       margin: 0 auto;
       justify-content: space-between;
       align-items: center;
       display: flex;
 
       > img {
-        max-height: 45px;
+        max-height: 4.5rem;
       }
 
       > div {
         display: flex;
-        gap: 16px;
+        gap: 1.6rem;
 
         button {
-          height: 40px;
+          height: 4rem;
         }
       }
     }
   }
   main {
-    max-width: 800px;
+    max-width: 80rem;
     margin: 0 auto;
 
     .room-title {
-      margin: 32px 0 24px;
+      margin: 3.2rem 0 2.4rem;
       display: flex;
       align-items: center;
+      color: ${theme.darkFont};
 
       h1 {
         font-family: "Poppins", sans-serif;
-        font-size: 24px;
-        color: #29292e;
+        font-size: 2.4rem;
+        color: ${theme.darkFont};
       }
 
       span {
-        margin-left: 16px;
-        background-color: #e559f9;
-        border-radius: 9999px;
-        padding: 8px 16px;
-        color: #fff;
+        margin-left: 1.6rem;
+        background-color: #b97dc4;
+        border-radius: 999.9rem;
+        padding: .8rem 1.6rem;
+        color: ${theme.darkFont};
         font-weight: 500;
-        font-size: 14px;
+        font-size: 1.4rem;
       }
     }
 
@@ -56,39 +60,42 @@ export const RoomPage = styled.div`
       textarea {
         width: 100%;
         border: 0;
-        padding: 16px;
-        border-radius: 8px;
-        background: #fefefe;
+        padding: 1.6rem;
+        border-radius: .8rem;
+        background: ${theme.darkBackground};
+        color: ${theme.darkFont};
         box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
         resize: vertical;
-        min-height: 130px;
+        min-height: 13rem;
       }
 
       .form-footer {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-top: 16px;
+        margin-top: 1.6rem;
 
         .user-info {
           display: flex;
           align-items: center;
+          background: ${theme.darkBackground};
+          
 
           img {
-            width: 32px;
-            height: 32px;
+            width: 3.2rem;
+            height: 3.2rem;
             border-radius: 50%;
           }
 
           > span {
-            margin-left: 8px;
-            color: #29292e;
+            margin-left: .8rem;
+            color: ${theme.darkFont};
             font-weight: 500;
-            font-size: 14px;
+            font-size: 1.4rem;
           }
         }
         span {
-          font-size: 14px;
+          font-size: 1.4rem;
           color: #737388;
           font-weight: 500;
 
@@ -97,7 +104,7 @@ export const RoomPage = styled.div`
             border: 0;
             color: #835afd;
             text-decoration: underline;
-            font-size: 14px;
+            font-size: 1.4rem;
             font-weight: 500;
             cursor: pointer;
           }
@@ -106,7 +113,9 @@ export const RoomPage = styled.div`
     }
 
     .question-list {
-      margin-top: 32px;
+      margin-top: 3.2rem;
+      color: ${theme.lightFont};
+      background: ${theme.darkBackground};
     }
   }
 

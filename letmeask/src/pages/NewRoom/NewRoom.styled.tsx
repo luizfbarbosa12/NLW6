@@ -1,10 +1,11 @@
 import styled from 'styled-components'
 
+
 export const MainContent = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 320px;
+    max-width: 32rem;
     align-items: stretch;
     text-align: center;
 
@@ -13,21 +14,21 @@ export const MainContent = styled.div`
     }
 
     h2 {
-      font-size: 24px;
-      margin: 64px 0 24px;
+      font-size: 2.4rem;
+      margin: 6.4rem 0 2.4rem;
       font-family: "Poppins", sans-serif;
     }
     form {
       input {
-        height: 50px;
-        border-radius: 8px;
-        padding: 0 16px;
+        height: 5rem;
+        border-radius: .8rem;
+        padding: 0 1.6rem;
         background: #fff;
-        border: 1px solid #a8a8b3;
+        border: .1rem solid #a8a8b3;
       }
 
       button {
-        margin-top: 16px;
+        margin-top: 1.6rem;
       }
 
       button,
@@ -36,9 +37,9 @@ export const MainContent = styled.div`
       }
     }
     p {
-      font-size: 14px;
+      font-size: 1.4rem;
       color: #737380;
-      margin-top: 16px;
+      margin-top: 1.6rem;
 
       a {
         color: #e559f9;
@@ -50,4 +51,5 @@ export const PageAuthNewRoom = styled.div`
     display: flex;
   align-items: stretch;
   height: 100vh;
+  
 `

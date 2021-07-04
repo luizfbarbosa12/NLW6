@@ -4,10 +4,10 @@ import {ButtonProps} from './Button';
 
 export const MainButton = styled.button`
     height: 50px;
-    border-radius: 8px;
+    border-radius: .8rem;
     font-weight: 500;
     background: ${(props: ButtonProps) => props.isOutlined ? '#fff' : '#835afd'};
-    padding: 0 32px;
+    padding: 0 3.2rem;
     color: ${(props: ButtonProps) => props.isOutlined ? '#835afd' : '#fff'};
     display: flex;
     cursor: pointer;
@@ -17,7 +17,7 @@ export const MainButton = styled.button`
     transition: filter 0.2s ease;
 
     img {
-      margin-right: 8px;
+      margin-right: .8rem;
     }
   
     &:not(:disabled):hover {

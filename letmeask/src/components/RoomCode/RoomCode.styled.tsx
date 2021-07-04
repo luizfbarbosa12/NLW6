@@ -1,18 +1,20 @@
 import styled from 'styled-components'
+import { theme } from '../../styles/Theme/theme'
 
 export const CopyButton = styled.button`
-    height: 40px;
-    border-radius: 8px;
+    height: 4rem;
+    border-radius: .8rem;
     overflow: hidden;
-    background: #fff;
-    border: 1px solid #835afd;
+    background: ${theme.darkBackground};
+    color: ${theme.darkFont};
+    border: .1rem solid #835afd;
     cursor: pointer;
     display: flex;
 `
 
 export const Container = styled.div`
       background: #835afd;
-      padding: 0 12px;
+      padding: 0 1.2rem;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -23,9 +25,9 @@ export const Code = styled.span`
       display: block;
       align-self: center;
       flex: 1;
-      padding: 0 16px 0 12px;
-      width: 230px;
-      font-size: 14px;
+      padding: 0 1.6rem 0 1.2rem;
+      width: 23rem;
+      font-size: 1.4rem;
       font-weight: 500;
 `
   
